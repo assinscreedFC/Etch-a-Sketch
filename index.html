@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,
+      wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="animate__animated animate__backInDown">Etch-a-Sketch</h1>
+    </header>
+    <section>
+      <div class="hero">
+        <div class="mapute">
+          <input type="color" value="#000" id="choixCouleur" />
+        </div>
+        <button id="random">randdom</button>
+
+        <button id="toggle">
+          <span class="btn-txt">colloerier on/off</span>
+        </button>
+        <button id="supprimer">
+          <span class="btn-txt">tout supprimer</span>
+        </button>
+        <input type="radio" />
+      </div>
+      <div class="container"></div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        assinscreedFC
+      </p>
+      <a href="https://github.com/assinscreedFC" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+    <script src="java.js"></script>
+  </body>
+</html>
