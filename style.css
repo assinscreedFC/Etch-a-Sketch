@@ -280,7 +280,7 @@ height: 60dvh;
 
 @media only screen and (max-width: 600px) {
   .container{
-    width: 40dvh;
+  width: 40dvh;
   height: 40dvh;
   }
 }
