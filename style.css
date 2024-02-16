@@ -257,8 +257,7 @@ height: 60dvh;
 }
 
 .footer {
-  position:initial;
-
+    position:initial;
     display: flex;
     flex-grow: 1;
     align-items: center;
@@ -276,5 +275,12 @@ height: 60dvh;
 .mapute {
   width: 80px;
   height: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    width: 40dvh;
+  height: 40dvh;
   }
 }
