@@ -1,9 +1,6 @@
 :root {
-    --animate-delay: 0s; 
     --animate-duration: 2s;
-    --primary-dark: #333;
-    --primary-light: #ededed;
-    --secondary-light: #fefefe;
+ 
   }
 
 *,::after,::before{
@@ -12,7 +9,11 @@
     padding: 0px;
 }
 body{
-    background-color: #484848;
+
+   background-image: linear-gradient(50deg, rgba(146, 146, 146, 0.02) 0%, rgba(146, 146, 146, 0.02) 25%,rgba(82, 82, 82, 0.02) 25%, rgba(82, 82, 82, 0.02) 50%,rgba(217, 217, 217, 0.02) 50%, rgba(217, 217, 217, 0.02) 75%,rgba(41, 41, 41, 0.02) 75%, rgba(41, 41, 41, 0.02) 100%),linear-gradient(252deg, rgba(126, 126, 126, 0.01) 0%, rgba(126, 126, 126, 0.01) 25%,rgba(117, 117, 117, 0.01) 25%, rgba(117, 117, 117, 0.01) 50%,rgba(219, 219, 219, 0.01) 50%, rgba(219, 219, 219, 0.01) 75%,rgba(41, 41, 41, 0.01) 75%, rgba(41, 41, 41, 0.01) 100%),linear-gradient(272deg, rgba(166, 166, 166, 0.01) 0%, rgba(166, 166, 166, 0.01) 20%,rgba(187, 187, 187, 0.01) 20%, rgba(187, 187, 187, 0.01) 40%,rgba(238, 238, 238, 0.01) 40%, rgba(238, 238, 238, 0.01) 60%,rgba(204, 204, 204, 0.01) 60%, rgba(204, 204, 204, 0.01) 80%,rgba(5, 5, 5, 0.01) 80%, rgba(5, 5, 5, 0.01) 100%),linear-gradient(86deg, rgba(143, 143, 143, 0.02) 0%, rgba(143, 143, 143, 0.02) 12.5%,rgba(36, 36, 36, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 25%,rgba(23, 23, 23, 0.02) 25%, rgba(23, 23, 23, 0.02) 37.5%,rgba(223, 223, 223, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 50%,rgba(101, 101, 101, 0.02) 50%, rgba(101, 101, 101, 0.02) 62.5%,rgba(94, 94, 94, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 75%,rgba(148, 148, 148, 0.02) 75%, rgba(148, 148, 148, 0.02) 87.5%,rgba(107, 107, 107, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 100%),linear-gradient(25deg, rgba(2, 2, 2, 0.02) 0%, rgba(2, 2, 2, 0.02) 16.667%,rgba(51, 51, 51, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 33.334%,rgba(26, 26, 26, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 50.001000000000005%,rgba(238, 238, 238, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 66.668%,rgba(128, 128, 128, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 83.33500000000001%,rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%),linear-gradient(325deg, rgba(95, 95, 95, 0.03) 0%, rgba(95, 95, 95, 0.03) 14.286%,rgba(68, 68, 68, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 28.572%,rgba(194, 194, 194, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 42.858%,rgba(51, 51, 51, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 57.144%,rgba(110, 110, 110, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 71.42999999999999%,rgba(64, 64, 64, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 85.71600000000001%,rgba(31, 31, 31, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 100.002%),linear-gradient(90deg, hsl(80,0%,14%),hsl(80,0%,14%));
+}
+header{
+  margin: 20px;
 }
 
 h1 {
@@ -21,6 +22,7 @@ h1 {
     font-style: normal;
     text-align: center;
     font-size: 7dvh;
+    color: white;
   }
 .container {
 
@@ -60,17 +62,17 @@ flex-direction: row;
     height: 100px;
     
     border-radius: 50%;
-    overflow: hidden;
+  
     margin: 10px auto;
 }
 input{
-    width: 100px;
-    height: 100px;
-    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     background-color: transparent;
     appearance: none;
-    border: none;
-    overflow: hidden;
+    margin: 0px auto;
+    border: none; 
     transform: scale(1.2);
     
 }
@@ -80,8 +82,8 @@ section{display: flex;}
     display: flex;
     flex-direction: column;
     width: 40dvh;
-    height: 60dvh;
-    background-color: white;
+    height: auto;
+    background-color: transparent;
     margin: 5dvh 20dvh;
     position: absolute;
     gap:30px;
@@ -101,14 +103,15 @@ section{display: flex;}
     width: 100%;
     padding: 10px;
     font-size: 20px;
+    color: white;
     
   }
   
   .fa-github {
-    color: var(--primary-dark);
+   
     font-size: 24px;
     transition: transform 0.3s ease-in-out;
-    color: #333;
+   
 
   }
   
@@ -118,6 +121,7 @@ section{display: flex;}
 
   button {
     width: 200px;
+    min-height: 42px;
     margin: 0 auto;
     cursor: pointer;
     position: relative;
@@ -160,4 +164,63 @@ section{display: flex;}
     scale: 1;
   }
 
+  .price {
+    margin-top: 0px;
+    text-align: center;
+  }
   
+  .price label {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Input Range */
+  .range {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #range  {
+    width: 80%;
+    height: 9px;
+    border-radius: 9px;
+    background: #3e3038;
+    background: linear-gradient(
+      90deg,
+      rgba(117, 20, 241, 1) 0%,
+      rgba(175, 26, 170, 1) 12%,
+      rgba(233, 61, 90, 1) 19%,
+      rgba(62, 48, 56, 1) 19%
+    );
+    appearance: none;
+    outline: none;
+  }
+  
+  /* Chrome & Safari */
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #e93c59;
+    border-radius: 90px;
+    box-shadow: 0 0 13px 0 #e93c59;
+    cursor: pointer;
+  }
+  
+  /* Firefox */
+  input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #e93c59;
+    border-radius: 90px;
+    box-shadow: 0 0 13px 0 #e93c59;
+    cursor: pointer;
+    border: 0;
+  }
+  
+a{
+  color: white;
+}
