@@ -11,6 +11,7 @@ const divFlex=document.createElement("div");
 divFlex.classList.add("flex1");
 
 let nodeliste=[];
+//function pour cree les petit carre dans le grand carre central
 (function (){
         for(let i=0;i<j;i++){
            container.innerHTML+=     ` <div class="flex1"></div>`;
@@ -65,6 +66,7 @@ const blt=document.querySelector(".mapute")
 let color="#000000";
 inputCouleur = document.getElementById('choixCouleur');
 inputCouleur.addEventListener('input', function() {
+    // Récupérez la valeur de la couleur choisie
      color = inputCouleur.value;
 
    
@@ -75,6 +77,7 @@ addEventListener("pointerover", (event) => {
         
          let parentElement = event.target.parentNode;
     parentElement=parentElement.parentNode;
+    // Vérifiez si l'élément parent a la classe spécifique "container"
  
      
      if(parentElement.classList.contains("container")&& !event.target.style.backgroundColor ){
@@ -93,10 +96,12 @@ addEventListener("pointerover", (event) => {
 const elementAAnimer=document.querySelector("h1");
 
 window.addEventListener('blur', function() {
+    // Vous avez quitté l'onglet, désactivez l'animation
     elementAAnimer.classList.remove('animate__animated', 'animate__backInDown');
     
 });
 
+// Ajoutez un gestionnaire d'événements pour l'événement focus
 window.addEventListener('focus', function() {
     
     elementAAnimer.classList.add('animate__animated', 'animate__backInDown');
@@ -169,6 +174,54 @@ function updateRange() {
 
 
 
+
+
+
+
+
+
+
+
+// const flex = document.querySelectorAll('.flex1');
+// console.log(flex);
+
+// let j = prompt("Entrer un nombre") * 1;
+
+// (function () {
+        
+
+
+
+//     for (let i = 0; i < j; i++) {
+        
+//         const flexItem = document.createElement('div');
+        
+       
+//         flexItem.id = i;
+
+        
+//         flexItem.style.width = (100 / j) + "%";
+        
+        
+//         for (let k = 0; k < flex.length; k++) {
+//             flex[k].appendChild(flexItem.cloneNode(true));
+//         }
+//     }
+// })();
+// (function(){
+// for(let i=0;i<j;i++){
+//     let elements = document.getElementById(`${i}`);
+// console.log(elements);
+        
+        
+
+//            elements.style.height = (100 / j) + "%"               ;
+
+       
+// }
+
+
+// })();
 
 
 
