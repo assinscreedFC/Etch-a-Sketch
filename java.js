@@ -5,8 +5,8 @@ const couleur=document.querySelector("#random");
 const monbtn=document.querySelector("#toggle");
 const sup=document.querySelector("#supprimer");
 const container=document.querySelector(".container");
-let j=10 ;
-
+let j=10 ;//prompt( "Enter the number of rows: ")*1;
+//const divFlex.innerHTML=`<div class="flex1"> </div>`;
 const divFlex=document.createElement("div");
 divFlex.classList.add("flex1");
 
@@ -69,13 +69,13 @@ inputCouleur.addEventListener('input', function() {
     // Récupérez la valeur de la couleur choisie
      color = inputCouleur.value;
 
-   
+    blt.style.boxShadow =`0.5px 1.5px 25px 7.5px ${color}`;
      } );
 
 addEventListener("pointerover", (event) => {
      if(vrai){
         
-         let parentElement = event.target.parentNode;
+         var parentElement = event.target.parentNode;
     parentElement=parentElement.parentNode;
     // Vérifiez si l'élément parent a la classe spécifique "container"
  
@@ -103,6 +103,7 @@ window.addEventListener('blur', function() {
 
 // Ajoutez un gestionnaire d'événements pour l'événement focus
 window.addEventListener('focus', function() {
+    // Vous êtes revenu dans l'onglet, activez l'animation
     
     elementAAnimer.classList.add('animate__animated', 'animate__backInDown');
     
@@ -110,120 +111,26 @@ window.addEventListener('focus', function() {
 
 const range = document.querySelector("#range");
 const label = document.querySelector(".price label");
-const boxPrices = document.querySelectorAll(".box");
+
 
 let value = 16;
 range.value = value;
 
-let you=vrai;
-function updateRange() {
-  let percentage = (100 * value) / 100;
-  range.style.background = ` linear-gradient(90deg, rgba(117,20,241,1) 0%, rgba(175,26,170,1) ${percentage}%, rgba(233,61,90,1) ${percentage}%, rgba(62,48,56,1) ${percentage}%)`;
-  label.innerText =  ` ${value} x ${value}` ;
 
-  range.addEventListener("input", (e) => {
-    j = percentage = (100 * value) / 100;
-  
-    value = +e.target.value;
-    range.style.background = ` linear-gradient(90deg, rgba(117,20,241,1) 0%, rgba(175,26,170,1) ${percentage}%, rgba(233,61,90,1) ${percentage}%, rgba(62,48,56,1) ${percentage}%)`;
-    label.innerText = ` ${value} x ${value} `;
-    
-    });
+ 
+    let percentage = (100 * value) / 100;
+    range.style.background = `linear-gradient(90deg, rgba(117,20,241,1) 0%, rgba(175,26,170,1) ${percentage}%, rgba(233,61,90,1) ${percentage}%, rgba(62,48,56,1) ${percentage}%)`;
+    label.innerText = ` ${value} x ${value}`;
+
+    range.addEventListener("input", (e) => {
+      j = percentage = (100 * value) / 100;
+      value = +e.target.value;
+      range.style.background = `linear-gradient(90deg, rgba(117,20,241,1) 0%, rgba(175,26,170,1) ${percentage}%, rgba(233,61,90,1) ${percentage}%, rgba(62,48,56,1) ${percentage}%)`;
+      label.innerText = ` ${value} x ${value}`;
    
-    
-    
-  }
-  updateRange();
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const flex = document.querySelectorAll('.flex1');
-// console.log(flex);
-
-// let j = prompt("Entrer un nombre") * 1;
-
-// (function () {
-        
-
-
-
-//     for (let i = 0; i < j; i++) {
-        
-//         const flexItem = document.createElement('div');
-        
-       
-//         flexItem.id = i;
-
-        
-//         flexItem.style.width = (100 / j) + "%";
-        
-        
-//         for (let k = 0; k < flex.length; k++) {
-//             flex[k].appendChild(flexItem.cloneNode(true));
-//         }
-//     }
-// })();
-// (function(){
-// for(let i=0;i<j;i++){
-//     let elements = document.getElementById(`${i}`);
-// console.log(elements);
-        
-        
-
-//            elements.style.height = (100 / j) + "%"               ;
-
-       
-// }
-
-
-// })();
-
-
+   
+  });
 
 
 
