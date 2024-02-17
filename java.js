@@ -49,17 +49,43 @@ function clearGrid() {
     container.innerHTML = ''
   }
 function setupGrid(){
-    for(let i=0;i<j;i++){
-       container.innerHTML+=     ` <div class="flex1"></div>`;
-    }
-const  row=document.querySelectorAll(".flex1");
-
-row.forEach((Element)=>  Element.style.height = (100 / j) + "%" ) ;
-for(let k=0;k<row.length;k++) {
-row.forEach((Element)=>  Element.innerHTML+=` <div id="${k}" style="width: ${(100 / j) + "%"};"> </div>`  ) ;
-
-}
+  flexGrid=document.createElement( "div" );
+  flexGrid.classList.add("flex1");
+  flexGrid.style.height = (100 / j) + "%"
+  for(let i=0;i<j;i++){
+    flexGrid.innerHTML+= ` <div id="${i}" style="width: ${(100 / j) + "%"};"> </div>`
+  }
+  for(let i=0;i<j;i++){
+    container.appendChild(flexGrid.cloneNode(true));
+  }
 };
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function getRandomColor() {
